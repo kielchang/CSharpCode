@@ -28,7 +28,7 @@ namespace TimerInterval
 
         private static void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
-            Console.WriteLine("The Elapsed event was raised at {0}", e.SignalTime);
+            Console.WriteLine("The Elapsed event was raised at {0}", e.SignalTime.ToString("yyyy/MM/dd HH:mm:ss"));
         }
     }
 }
