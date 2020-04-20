@@ -9,6 +9,11 @@ namespace TimerInterval
 
         public static void Main()
         {
+            ConsoleMode.DisbleQuickEditMode();
+
+            Console.Error.WriteLine();
+            Console.WriteLine();
+
             // Create a timer and set a two second interval.
             timer = new System.Timers.Timer();
             timer.Interval = 2000;
@@ -26,7 +31,7 @@ namespace TimerInterval
             Console.ReadLine();
         }
 
-        private static void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
+        private static void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
             Console.WriteLine("The Elapsed event was raised at {0}", e.SignalTime);
         }
